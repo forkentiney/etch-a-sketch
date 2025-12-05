@@ -1,0 +1,82 @@
+:root {
+  --bg-dark: hsl(205, 45%, 50%);
+  --shadow: hsl(0, 0%, 10%);
+  --text: hsl(25, 80%, 80%);
+  --title: hsl(0, 0%, 95%);
+  --bg-light: hsl(0, 0%, 85%);
+  --text-muted: hsl(25, 80%, 65%)
+  --primary: hsl(4, 85%, 30%);
+  --secondary: hsl(4, 85%, 50%);
+  --danger:;
+  --warning:;
+  --success:;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  font-size: 100%;
+  font-family: "Bitcount Prop Single", system-ui;
+  font-weight: 600;
+  font-size: normal;
+  box-sizing: border-box;
+  color: inherit;
+  background-color: inherit;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text);
+}
+
+#viewport {
+  display: flex;
+  flex-direction: column;
+}
+
+#header {
+  color: var(--title);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  z-index: 5;
+}
+
+#footer {
+  display: grid;
+  justify-content: flex-end;
+  grid-template-columns: 1fr 1fr 1fr;
+  font-size: 14px;
+  padding: 48px 0;
+}
+
+.credit, .license, .contact, .socials {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.credit, .license, .contact {
+  flex-direction: column;
+}
+
+.credit {
+  grid-column: 2;
+}
+
+.license {
+  grid-column: 1;
+}
+
+.contact {
+  grid-column: 3;
+}
+
+.icon {
+  margin: 8px;
+  height: 24px;
+  width: auto;
+}
+
