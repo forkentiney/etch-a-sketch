@@ -1,5 +1,5 @@
 :root {
-  --bg-dark: hsl(205, 45%, 50%);
+  --bg-dark: hsl(205, 45%, 40%);
   --shadow: hsl(0, 0%, 10%);
   --text: hsl(25, 80%, 80%);
   --title: hsl(0, 0%, 95%);
@@ -33,6 +33,7 @@ body {
 #viewport {
   display: flex;
   flex-direction: column;
+  height: 100vh;
 }
 
 #header {
@@ -46,7 +47,7 @@ body {
 
 #footer {
   display: grid;
-  justify-content: flex-end;
+  margin-top: auto;
   grid-template-columns: 1fr 1fr 1fr;
   font-size: 14px;
   padding: 48px 0;
