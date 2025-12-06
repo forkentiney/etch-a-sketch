@@ -4,7 +4,7 @@
   --text: hsl(25, 80%, 80%);
   --title: hsl(0, 0%, 95%);
   --bg-light: hsl(0, 0%, 85%);
-  --text-muted: hsl(25, 80%, 65%)
+  --text-muted: hsl(25, 80%, 65%);
   --primary: hsl(4, 85%, 30%);
   --secondary: hsl(4, 85%, 50%);
   --danger:;
@@ -43,6 +43,31 @@ body {
   align-items: center;
   padding: 8px 16px;
   z-index: 5;
+}
+
+#body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+#toy {
+  display: flex;
+  justify-content: center;
+  height: 600px;
+  width: 750px;
+  border-radius: 4px;
+  background-color: var(--primary);
+}
+
+#screen {
+  display: flex;
+  height: 400px;
+  width: 580px;
+  margin-top: 85px;
+  border-radius: 8px;
+  background-color: var(--bg-light);
 }
 
 #footer {
