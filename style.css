@@ -18,7 +18,7 @@
   border: 0px;
   font-family: inherit;
   font-size: 100%;
-  font-weight: 600;
+  font-weight: inherit;
   font-size: normal;
   box-sizing: border-box;
   color: inherit;
@@ -27,6 +27,7 @@
 
 body {
   font-family: "Bitcount Prop Single", system-ui;
+  font-weight: 600;
   background-color: var(--bg-dark);
   color: var(--text);
 }
@@ -58,13 +59,15 @@ body {
   grid-template: 30px 70px 1fr 100px 30px / 30px 1fr 30px;
   height: 800px;
   width: 1000px;
-  border-radius: 4px;
-  box-shadow: 0px 8px 8px 2px var(--shadow);
+  border-radius: 6px;
+  box-shadow: 0px 8px 8px 2px var(--shadow), 0px 0px 48px 4px hsl(4, 85%, 20%) inset;
   background-color: var(--primary);
   margin: 48px;
 }
 
 #bezel-left, #bezel-right, #bezel-top, #bezel-bottom {
+  background-color: transparent;
+  border-radius: 2px;
   height: 100%;
   width: 100%;
 }
@@ -79,25 +82,22 @@ body {
 
 #bezel-top {
   grid-row: 1;
-  background-color: hsl(4, 85%, 25%);
-  background: linear-gradient(to bottom, hsl(4, 85%, 25%) 0%, var(--primary) 100%);
+  border-bottom: 3px solid hsl(4, 85%, 31%);
 }
 
 #bezel-left {
   grid-column: 1;
-  background-color: transparent;
-  background: linear-gradient(to right, hsl(4, 85%, 25%) 25%, var(--primary) 75%, var(--bg-light) 100%);
+  border-right: 3px solid hsl(0, 0%, 90%, 75%);
 }
 
 #bezel-bottom {
   grid-row: 5;
-  background: linear-gradient(to top, hsl(4, 85%, 25%) 0%, var(--primary) 100%);
+  border-top: 3px solid hsl(4, 85%, 31%);
 }
 
 #bezel-right {
   grid-column: 3;
-  background-color: transparent;
-  background: linear-gradient(to left, hsl(4, 85%, 25%) 25%, var(--primary) 75%, var(--bg-light) 100%);
+  border-left: 3px solid hsl(0, 0%, 90%, 75%);
 }
 
 #title {
@@ -133,7 +133,7 @@ body {
 #knob-left, #knob-right {
   display: flex;
   justify-content: space-between;
-  color: black;
+  color: var(--shadow);
   align-items: center;
   height: 100px;
   width: 100px;
@@ -141,8 +141,12 @@ body {
   background-color: var(--bg-light);
   box-shadow: 4px 8px 8px 2px var(--shadow);
   font-size: 24px;
+  font-weight: 300;
   padding: 12px;
-  border: 2px solid var(--shadow);
+  border-top: 2px solid hsl(0, 0%, 25%);
+  border-left: 2px solid hsl(0, 0%, 20%);
+  border-bottom: 2px solid hsl(0, 0%, 10%);
+  border-right: 2px solid hsl(0, 0%, 15%);
 }
 
 #footer {
