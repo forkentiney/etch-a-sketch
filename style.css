@@ -162,6 +162,16 @@ body {
   user-select: none;
 }
 
+.clockwise {
+  transform: rotate(360deg);
+  transition: all 5s;
+}
+
+.anticlockwise {
+  transform: rotate(-360deg);
+  transition: all 5s;
+}
+
 #footer {
   display: grid;
   margin-top: auto;
