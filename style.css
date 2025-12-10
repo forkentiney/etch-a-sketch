@@ -172,6 +172,18 @@ body {
   transition: all 5s;
 }
 
+.selector, .slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider {
+  width: 256px;
+  padding: 8px;
+}
+
 #footer {
   display: grid;
   margin-top: auto;

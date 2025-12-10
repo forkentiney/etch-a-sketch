@@ -27,13 +27,21 @@
           <div id="title">
             <p>Etch-A-Sketch</p>
           </div>
-          <div id="screen"></div>
+          <div id="screen">
+            <p id="res-display"></p>
+          </div>
           <div id="controls">
             <div class="knob">
               <div id="knob-left">
                 <p>A</p>
                 <p>*</p>
                 <p>S</p>
+              </div>
+            </div>
+            <div class="selector">
+              <p>RESOLUTION</p>
+              <div class="slider">
+                <input id="resolution" type="range" min="8" max="128" step="8" value="64">
               </div>
             </div>
             <div class="knob">

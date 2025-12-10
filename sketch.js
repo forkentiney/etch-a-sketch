@@ -1,6 +1,9 @@
 const screen = document.querySelector("#screen");
 const leftKnob = document.querySelector("#knob-left");
 const rightKnob = document.querySelector("#knob-right");
+const slider = document.querySelector("#resolution");
+const resDisplay = document.querySelector("#res-display");
+let resolution = document.querySelector("#resolution");
 
 window.addEventListener("keydown", draw);
 window.addEventListener("keyup", stopDraw);
@@ -32,3 +35,5 @@ function stopDraw(key) {
     console.log("nothing happened");
   }
 };
+
+resDisplay.textContent = resolution.value
