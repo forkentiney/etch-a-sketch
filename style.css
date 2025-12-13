@@ -163,13 +163,29 @@ body {
 }
 
 .clockwise {
-  transform: rotate(360deg);
-  transition: all 5s;
+  animation: clockwise 3s linear infinite;
 }
 
 .anticlockwise {
-  transform: rotate(-360deg);
-  transition: all 5s;
+  animation: anticlockwise 3s linear infinite;
+}
+
+@keyframes clockwise {
+  0 {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes anticlockwise {
+  0 {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
 }
 
 .selector, .slider {
