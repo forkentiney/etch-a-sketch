@@ -7,8 +7,11 @@ let resolution = document.querySelector("#resolution");
 
 window.addEventListener("keydown", draw);
 window.addEventListener("keyup", stopDraw);
+resolution.addEventListener("input", changeResolution);
 
 function draw(key) {
+  resDisplay.textContent = "";
+
   if (key.code == "KeyA") {
     leftKnob.classList.add("anticlockwise");
   } else if (key.code == "KeyS") {
@@ -18,7 +21,7 @@ function draw(key) {
   } else if (key.code == "KeyL") {
     rightKnob.classList.add("clockwise");
   } else {
-    console.log("Not a valid keypress");
+    console.log("Not a valid keypress:");
   };
 };
 
@@ -36,4 +39,6 @@ function stopDraw(key) {
   }
 };
 
-resDisplay.textContent = resolution.value
+function changeResolution() {
+  resDisplay.textContent = resolution.value;
+};
