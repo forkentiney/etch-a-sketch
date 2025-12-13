@@ -193,6 +193,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  user-select: none;
 }
 
 .slider {
@@ -207,6 +208,7 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 256px;
+  user-select: none;
   color: hsl(0, 0%, 60%);
   background-color: transparent;
 }
