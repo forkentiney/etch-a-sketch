@@ -192,6 +192,7 @@ body {
   align-items: center;
   font-size: 256px;
   color: hsl(0, 0%, 60%);
+  background-color: transparent;
 }
 
 #footer {
