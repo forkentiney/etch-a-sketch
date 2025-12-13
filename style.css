@@ -184,6 +184,16 @@ body {
   padding: 8px;
 }
 
+#res-display {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 256px;
+  color: hsl(0, 0%, 60%);
+}
+
 #footer {
   display: grid;
   margin-top: auto;
