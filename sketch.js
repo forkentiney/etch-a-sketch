@@ -41,4 +41,17 @@ function stopDraw(key) {
 
 function changeResolution() {
   resDisplay.textContent = resolution.value;
+  let num = resolution.value;
+  for (let i = 0; i <= num; i++) {
+    const pixels = document.querySelectorAll(".pixel");
+    if (pixels.length < num) {
+      const pixel = document.createElement("div");
+      pixel.setAttribute("class", "pixel");
+      screen.appendChild(pixel);
+    } else if (pixels.length > num) {
+      pixels.forEach(p => p.remove());
+    } else if (pixels.length === num) {
+      console.log(pixels.length);
+    }
+  };
 };
