@@ -130,9 +130,8 @@ body {
 }
 
 .pixel {
-  height: 109px;
-  width: 156px;
   flex-shrink: 1;
+  flex-grow: 1;
   background-color: transparent;
   margin: 0;
   padding: 0;

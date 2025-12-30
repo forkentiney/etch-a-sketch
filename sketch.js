@@ -40,17 +40,22 @@ function stopDraw(key) {
 };
 
 function changeResolution() {
-  resDisplay.textContent = resolution.value;
-  let num = resolution.value;
+  let num = Math.pow(resolution.value, 2);
+  let height = Math.floor(552 / Math.sqrt(num));
+  let width = Math.floor(800 / Math.sqrt(num)) - 8;
   for (let i = 0; i <= num; i++) {
     const pixels = document.querySelectorAll(".pixel");
     if (pixels.length < num) {
       const pixel = document.createElement("div");
       pixel.setAttribute("class", "pixel");
+      pixel.setAttribute("style", `min-height: ${height}px; min-width: ${width}px;`);
       screen.appendChild(pixel);
-    } else if (pixels.length > num) {
+      console.log("Resolution increased");
+    } else if (num < pixels.length) {
       pixels.forEach(p => p.remove());
+      console.log("Resolution decreased");
     } else if (pixels.length === num) {
+      pixels.forEach(p => p.setAttribute("style", `min-height: ${height}px; min-width: ${width}px;`));
       console.log(pixels.length);
     }
   };
