@@ -8,6 +8,13 @@ window.addEventListener("keydown", draw);
 window.addEventListener("keyup", stopDraw);
 resolution.addEventListener("input", changeResolution);
 
+function doodle() {
+  let pixels = document.querySelectorAll(".pixel");
+  pixels.forEach(p => p.addEventListener("mouseover", (event) => {
+    event.target.style.background = "black";
+  }));
+};
+
 function draw(key) {
   if (key.code == "KeyA") {
     leftKnob.classList.add("anticlockwise");
@@ -36,12 +43,13 @@ function stopDraw(key) {
   }
 };
 
+
 function changeResolution() {
   let num = Math.pow(resolution.value, 2);
   let height = Math.floor(552 / Math.sqrt(num));
   let width = Math.floor(800 / Math.sqrt(num)) - 8;
   for (let i = 0; i <= num; i++) {
-    const pixels = document.querySelectorAll(".pixel");
+    let pixels = document.querySelectorAll(".pixel");
     if (pixels.length < num) {
       const pixel = document.createElement("div");
       pixel.setAttribute("class", "pixel");
@@ -56,4 +64,8 @@ function changeResolution() {
       console.log(pixels.length);
     }
   };
+
+  doodle();
 };
+changeResolution();
+doodle();
